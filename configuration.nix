@@ -92,6 +92,8 @@
   programs.light.enable = true;
   programs.vim.defaultEditor = true;
 
+  programs.ssh.startAgent = true;
+
   users.users.jch = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" ];
