@@ -1,0 +1,17 @@
+bat-0.15.4 
+binutils-2.31.1 
+cachix-0.3.8 
+clang-tools-10.0.0 
+clang-wrapper-7.1.0 
+ctags-816 
+filezilla-3.48.1 
+fzf-0.21.1 
+fzf-zsh-unstable-2019-09-09 
+gdb-9.2 
+gnum4-1.4.18 
+gnumake-4.3 
+ocaml-4.10.0 
+opam-2.0.7 
+rlwrap-0.43 
+stack-2.3.1 
+vscode-1.46.1
