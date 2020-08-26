@@ -1,0 +1,32 @@
+alt + Return
+    alacritty
+
+alt + Escape
+    bspc quit
+
+alt + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+alt + ctrl + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+alt + q
+    bspc node -c
+
+alt + space
+    rofi -modi drun -show drun
+
+alt + r
+    bspc wm -r && killall -SIGUSR1 sxhkd
+
+alt + f
+    bspc node focused.fullscreen -t tiled || bspc node focused.tiled -t fullscreen
+    
+alt + {1,2,3,4}
+    bspc desktop -f "^{1,2,3,4}" 
+
+alt + ctrl + {1,2,3,4}
+    bspc node -d "^{1,2,3,4}"
+
+alt + p
+    ~/.config/rofi-power/rofi-power "bspc quit"

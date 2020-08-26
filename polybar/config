@@ -1,0 +1,95 @@
+; vim: set ft=dosini:
+[settings]
+pseudo-transparency = true
+
+[bar/mybar]
+
+override-redirect = ture
+wm-restack = bspwm
+fixed-center = true
+height = 25
+width = 100%:-20
+offset-x = 10
+offset-y = 4
+radius = 5
+
+tray-position = left
+font-0 = Hack:size=13;3
+font-1 = Hack:size=13:style=bold;3
+
+background = ${colours.teal}
+
+modules-left = bspwm audio
+modules-center = title
+modules-right = date time battery
+
+[colours]
+dark = #2E3440
+grey = #4c566a
+white = #D8DEE9
+cream = #ECEFF4
+teal = #8FBCBB
+ice = #88C0D0
+royal = #81A1C1
+red = #BF616A
+orange = #D08770
+yellow = #EBCB8B
+green = #A3BE8C
+purple = #B48EAD
+
+[module/date]
+type = internal/date
+label = %date%
+date = " %A, %b %e, %Y "
+format-background = ${colours.yellow}
+
+[module/time]
+type = internal/date
+label = %time%
+time = " %I:%M %p "
+format-background = ${colours.orange}
+
+[module/title]
+type = internal/xwindow
+label-maxlen = 30
+format-background = ${colours.grey}
+format-padding = 1
+
+[module/bspwm]
+type = internal/bspwm
+ws-icon-default = " ◉ "
+label-focused = %icon%
+label-focused-foreground = ${colours.ice}
+label-occupied = %icon%
+label-occupied-foreground = ${colours.dark}
+label-urgent = %icon%
+label-urgent-foreground = ${colours.dark}
+label-empty = %icon%
+label-empty-foreground = ${colours.dark}
+format-foreground = ${colours.dark}
+format-background = ${colours.cream}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ACAD
+label-charging = " %percentage%% "
+label-discharging = " %percentage%% "
+label-full = " %percentage%% "
+format-discharging-background = ${colours.cream}
+format-discharging-foreground = ${colours.dark}
+format-discharging-font = 2
+format-charging-background = ${colours.green}
+format-charging-foreground = ${colours.cream}
+format-charging-font = 2
+format-full-background = ${colours.cream}
+format-full-foreground = ${colours.dark}
+format-full-font = 2
+
+[module/audio]
+type = internal/pulseaudio
+label-volume = " %percentage%% "
+label-muted = " %percentage%% "
+format-volume-background = ${colours.purple}
+format-muted-background = ${colours.cream}
+format-muted-foreground = ${colours.dark}

@@ -1,0 +1,8 @@
+#!/run/current-system/sw/bin/sh
+
+feh --no-fehbg --bg-scale ~/.config/feh/background.png
+$HOME/.config/polybar/launch.sh
+
+bspc monitor -d 1 2 3 4
+
+bspc config pointer_modifier mod1
